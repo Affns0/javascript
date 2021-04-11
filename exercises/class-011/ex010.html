@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fines IE</title>
+    <style>
+        body {
+            background-color: rgb(43, 179, 43);
+            font: normal 22px arial;
+            text-align: center;
+        }
+        div#main {
+            background-color: orangered;
+            margin: 19px;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Fines System</h1>
+        <hr>
+        Car speed: <input type="number" name="txtspeed" id="txtspeed"> <km>
+        <input type="button" value="verification" onclick="calculate()">
+        <div id="res">
+    </div>
+
+    </div>
+    <script>
+        function calculate() {
+            txts = document.getElementById('txtspeed')
+            res = document.getElementById('res')
+            speed = Number(txts.value)
+            res.innerHTML = `<p>Your speed is <strong>${speed}km/h</strong></p>`
+            if (speed > 60) {
+                res.innerHTML += `You axceeded the allowed speed, <strong>Fined!</strong>`
+            }
+            res.innerHTML += `<p>Be caful, drive safe!</p>`
+        }
+    </script>
+</body>
+</html>
