@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immigration Declaration</title>
+    <style>
+        body {
+            background-color: burlywood;
+            font: normal 18px Arial;
+        }
+        header#top {
+            background-color: white;
+            text-align: center;
+            margin: 30px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input {
+            margin-top: 5px;
+        }
+        h2 {
+            background-color: white;
+            text-align: center;
+            padding: 10px;
+            margin: 30px;
+            border-radius: 10px;
+        }
+        main#info {
+            background-color: white;
+            text-align: center;
+            padding: 10px;
+            margin: 30px;
+            border-radius: 10px;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header id="top">
+        <h1>Support to Travelers</h1>
+        Enter where you are from <br>
+        <input type="search" id="search">
+        <input type="button" value="search" onclick="clicar()">
+    </header>
+    <h2>Here comes your answers</h2>
+    <main id="info"> 
+        <script>
+            function clicar() {
+                text = document.getElementById('search')
+                info = document.getElementById('info')
+                txt1 = String(text.value)
+                info.innerHTML = `<p>You are from ${txt1}</p>`
+                if (txt1 == 'europe') {
+                    info.innerHTML = 'You are european'
+                } else {
+                    info.innerHTML = 'You are foreign'
+                }
+            }
+        </script>
+    </main>
+</body>
+</html>
