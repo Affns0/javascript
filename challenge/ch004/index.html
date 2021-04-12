@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Age Checker</h1>
+    </header>
+    <main>
+        <div>
+            <p> Year of birth:
+                <input type="number" name="txtyear" id="txtyear" min="0">
+            </p>
+            <p> Sex:
+                <input type="radio" name="radsex" id="male" checked>
+                <label for="male">Male</label>
+                <input type="radio" name="radsex" id="fama">
+                <label for="fama">Famale</label>
+            </p>
+            <p>
+                <input type="button" value="check" onclick="check()">
+            </p>
+        </div>
+        <div id="res" style="text-align: center;">
+            Fill in the data above to see the result!
+            
+        </div>
+    </main>
+    <footer>
+        <p style="text-align: center;"> &copy; Developed By Pedro Borrello</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
