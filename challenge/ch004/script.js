@@ -1,48 +1,50 @@
-function check() {
+function search() {
     var date = new Date()
     var year = date.getFullYear()
-    var fyear = document.getElementById('txtyear')
-    var res = document.getElementById('res')
-    if (fyear.value.length == 0 || Number(fyear.value) > year) {
-        alert('[ERRO} Check your data and try again!!')
+    var entyear = document.getElementById('txtyear')
+    var exit = document.getElementById('exit')
+    if (entyear.value.length == 0 ||Number(entyear.value) > year) {
+        window.alert('[ERROR] Check your data first and try again!')
     } else {
-        var fsex = document.getElementsByName('radsex')
-        var age = year - Number(fyear.value)
+        var entsex = document.getElementsByName('radsex')
+        var age = year - Number(entyear.value)
         var gender = ''
         var img = document.createElement('img')
-        img.setAttribute('id', 'foto', )
-        if (fsex[0].checked) {
-            gender = 'man'
-            if (age >= 0 && age < 10) {
-                //children
+        img.setAttribute('id', 'picture')
+        if (entsex[0].checked) {
+            gender = 'Man'
+            if (age >=0 && age < 10) {
+                //child
                 img.setAttribute('src', 'image/young_m.jpg')
             } else if (age < 21) {
                 //teenager
                 img.setAttribute('src', 'image/teenager_m.jpg')
-            } else if (age < 60) {
-                //adult
+            } else if (age < 50) {
+                // adult
                 img.setAttribute('src', 'image/adult_m.jpg')
-            } else if  (age < 150) {
-                //Old Man
+            } else {
+                //old man
                 img.setAttribute('src', 'image/old_man.jpg')
             }
-        } else if (fsex[1].checked) {
-            gender = 'woman'}
-            if ( age >= 0 && age < 10) {
-                //children
+        } else if (entsex[1].checked) {
+            gender = 'Woman'
+            if (age >=0 && age < 10) {
+                //child
                 img.setAttribute('src', 'image/young_f.jpg')
             } else if (age < 21) {
                 //teenager
                 img.setAttribute('src', 'image/teenager_f.jpg')
-            } else if (age < 60) {
-                //adult
-            img.setAttribute('src', 'image/adult_f.jpg')
-            } else if (age < 150) {
-                //Old Lady
+            } else if (age < 50) {
+                // adult
+                img.setAttribute('src', 'image/adult_f.jpg')
+            } else {
+                //old woman
                 img.setAttribute('src', 'image/old_lady.jpg')
-        }   
-        res.style.textAlign = 'center'
-        res.innerHTML = `Detected ${gender} with ${age} years old.`
-        res.appendChild(img)
+            }
+        }
+        exit.style.textAlign = 'center'
+        exit.innerHTML = `Checked ${gender} with ${age} years old.`
+        exit.appendChild(img)
     }
+        
 }
