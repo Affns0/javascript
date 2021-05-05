@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgba(24, 23, 23, 0.74);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    margin-right: 20px;
+    margin-left: 20px;
+    box-shadow: 2px 2px 2px rgba(24, 23, 23, 0.397);
+
+}
+
+p#ended {
+    padding-left: 10px;
+    text-align: left;
+}
+
+p#started {
+    padding-left: 5px;
+    text-align: left;
+}
+
+p#button {
+    padding-left: 49px;
+    text-align: left;
+}
+p#jum {
+    text-align: left;
+}
+
+footer {
+    text-align: center;
+}
